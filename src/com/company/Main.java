@@ -74,9 +74,10 @@ public class Main {
         /*
             printing the calculations done using methods
         */
-        p("Taxable sub-total: " + invoice.taxableSubTotal(totalStore));
+        //formating the double into 2 decimal places ** String.format("any string  %.2f", value); **
+        p(String.format("Taxable sub-total: %.2f" ,invoice.taxableSubTotal(totalStore)));
         p("Untaxable Subtotal: " + invoice.untaxable());
-        p("Tax: "+ invoice.tax(totalStore));
+        p(String.format("Tax: %.2f", invoice.tax(totalStore)));
         p("Grand Total: "+ invoice.grandTotal(totalStore));
 
     }
